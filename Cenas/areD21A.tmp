@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://g1xgh8kinv00"]
+
+[ext_resource type="Script" path="res://Cenas/area_falsa.gd" id="1_huhok"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4kph"]
+size = Vector2(28, 18)
+
+[node name="AreaFalsa" type="Area2D"]
+script = ExtResource("1_huhok")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(17, 13)
+shape = SubResource("RectangleShape2D_a4kph")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 32.0
+offset_bottom = 23.0
+text = "oi"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="ready" from="." to="." method="_on_ready"]

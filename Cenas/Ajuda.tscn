@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://igji1d4vm2ui"]
+
+[ext_resource type="Script" path="res://Cenas/ajuda.gd" id="1_m73fm"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m73fm")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Voltar"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

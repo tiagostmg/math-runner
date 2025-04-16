@@ -1,0 +1,6 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://ch3e1s3uagxyw"]
+
+[ext_resource type="Texture2D" uid="uid://cs15w6ohgp4ev" path="res://Sprites/botoes/a-pixilart(1).png" id="1_yr5gf"]
+
+[resource]
+texture = ExtResource("1_yr5gf")

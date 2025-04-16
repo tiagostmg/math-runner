@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cu3omkbhappfm"]
+
+[node name="Resposta" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="TextoResposta" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
