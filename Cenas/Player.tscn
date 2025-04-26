@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://calh3kmccl2cf"]
 
-[ext_resource type="Script" path="res://Cenas/player.gd" id="1_cv2xp"]
+[ext_resource type="Script" uid="uid://d2yc6kcl6qegd" path="res://Cenas/player.gd" id="1_cv2xp"]
 [ext_resource type="Texture2D" uid="uid://dgqhrj3g1rw0n" path="res://Sprites/ACharUp.png" id="1_ioru6"]
 [ext_resource type="Texture2D" uid="uid://c3lrgjertqrf3" path="res://Sprites/Tileset/sombra.png" id="2_y5xf4"]
 [ext_resource type="Texture2D" uid="uid://thtm403do5kv" path="res://Sprites/Female 01-1.png" id="3_qbi6j"]

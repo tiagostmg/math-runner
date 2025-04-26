@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Projeto"
 run/main_scene="res://Cenas/tela_inicio.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
