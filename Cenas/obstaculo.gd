@@ -231,99 +231,18 @@ func sortear(a):
 			"resposta_correta": 1
 		}
 	]
-
-
-
-
-	
-	var num1 = 0
-	var num2 = 0
-	var num3 = 0
-	var Resposta = 0
-	
-	match a:
-		1:
-			num1 = (randi() % 10) + 1
-			num2 = (randi() % 10) + 1
-			Resposta = num1 + num2
-			
-			$"../Camera2D/Label".text = str(num1, " + ", num2)
-		3:
-			
-			num1 = (randi() % 6) + 1
-			num2 = (randi() % 6) + 1
-			num3 = (randi() % 6) + 1
-			
-			var op = randi() % 3
-			
-			match op:
-				0:
-					$"../Camera2D/Label".text = str(num1, " + ", num2, " + ", num3)
-					Resposta = num1 + num2 + num3
-
-				1:
-					if num1 >= num2:
-						$"../Camera2D/Label".text = str(num1, " - ", num2, " + ", num3)
-					else:
-						num1 = num2 + 3
-						$"../Camera2D/Label".text = str(num1, " - ", num2, " + ", num3)
-					
-					Resposta = num1 - num2 + num3
-
-				2:
-					if num1 + num2 >= num3:
-						$"../Camera2D/Label".text = str(num1, " + ", num2, " - ", num3)
-					else:
-						num1 = num3 + 2
-						$"../Camera2D/Label".text = str(num1, " + ", num2, " - ", num3)
-					Resposta = num1 + num2 - num3
-		2:
-			var op = randi() % 2
-			
-			match op:
-				0:
-					num1 = (randi() % 6) + 1
-					num2 = (randi() % 2) + 2
-					$"../Camera2D/Label".text = str(num1, " × ", num2)
-					Resposta = num1 * num2
-				1:
-					num2 = (randi() % 3) + 1
-					num1 = num2 * ((randi() % 5) + 1)
-					$"../Camera2D/Label".text = str(num1, " ÷ ", num2)
-					Resposta = num1 / num2
-					
-	var s = randi() % 3
-	var k = randi() % 3
-	
-	match s:
-		0:
-			#area1 certa
-			$Area1/Label1.text = str(Resposta)
-			if k != 0:
-				$Area2/Label2.text = str(Resposta + k + 1)
-				$Area3/Label3.text = str(Resposta + k)
-			else:
-				$Area2/Label2.text = str(Resposta + 2)
-				$Area3/Label3.text = str(Resposta + 1)
-				
-		1:
-			#area2 certa
-			$Area2/Label2.text = str(Resposta)
-			if k != 0:
-				$Area1/Label1.text = str(Resposta + k + 1)
-				$Area3/Label3.text = str(Resposta - k)
-			else:
-				$Area1/Label1.text = str(Resposta - 1)
-				$Area3/Label3.text = str(Resposta + 1)
-				
-		2:
-			#area3 certa
-			$Area3/Label3.text = str(Resposta)
-			if k != 0:
-				$Area1/Label1.text = str(Resposta + k + 1)
-				$Area2/Label2.text = str(Resposta - k)
-			else:
-				$Area1/Label1.text = str(Resposta + 2)
-				$Area2/Label2.text = str(Resposta - 1)
 		
-	Global.areaCorreta = s + 1 #area correta
+	match a: # fase
+		1:
+			#logica para pegar uma questao aleatoria
+			var listaDosIndicesNãoUsados = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+			
+			
+			$"../Camera2D/Label".text = (" ")
+		2:
+			pass
+			
+		3:
+			pass
+		
+	Global.areaCorreta = 1 #area correta
