@@ -1,6 +1,6 @@
 [gd_scene load_steps=38 format=4 uid="uid://dspdelxgv82pr"]
 
-[ext_resource type="Script" path="res://Cenas/tela_inicio.gd" id="1_ajkdn"]
+[ext_resource type="Script" uid="uid://b671o1g35q85o" path="res://Cenas/tela_inicio.gd" id="1_ajkdn"]
 [ext_resource type="TileSet" uid="uid://cplpqso4x7vtq" path="res://tileset/new_tile_set.tres" id="2_vyr2v"]
 [ext_resource type="Texture2D" uid="uid://sey2rkaqihfh" path="res://Sprites/pixil-frame-0(4).png" id="3_5aw3l"]
 [ext_resource type="FontFile" uid="uid://cw7x2fo5rrm1b" path="res://Sprites/font/Minecraft.ttf" id="3_046hk"]

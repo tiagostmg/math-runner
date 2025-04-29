@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://1oisgj41djav"]
 
-[ext_resource type="Script" path="res://Cenas/game_over.gd" id="1_0qlrk"]
+[ext_resource type="Script" uid="uid://db1d1bx5fprc3" path="res://Cenas/game_over.gd" id="1_0qlrk"]
 [ext_resource type="TileSet" uid="uid://cplpqso4x7vtq" path="res://tileset/new_tile_set.tres" id="1_5lyw7"]
 [ext_resource type="FontFile" uid="uid://cw7x2fo5rrm1b" path="res://Sprites/font/Minecraft.ttf" id="3_705g8"]
 [ext_resource type="StyleBox" uid="uid://ch3e1s3uagxyw" path="res://tileset/hover.tres" id="4_e3k3q"]
