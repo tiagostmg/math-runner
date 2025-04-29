@@ -11,7 +11,9 @@ func _ready() -> void:
 	$"../Fundo Obstaculo".visible = true
 	$".".visible = true
 	$"../Camera2D/Label".visible = true
+	$"../Camera2D/TextoRespostas".visible = true
 	Global.pontuacao = 0
+	Global.listaDeQuestoesJaFeitas = []
 
 	Global.coracao = 3
 	match Global.fase:
@@ -45,18 +47,22 @@ func _on_timer_timeout() -> void:
 		$".".visible = false
 		$"../Fundo Obstaculo".visible = false
 		$"../Camera2D/Label".visible = false
+		$"../Camera2D/TextoRespostas".visible = false
 		
 	elif Global.pontuacao == 500 and Global.fase==2:
 		$"../Linha Chegada".position.y = $".".position.y
 		$".".visible = false
 		$"../Fundo Obstaculo".visible = false
 		$"../Camera2D/Label".visible = false
+		$"../Camera2D/TextoRespostas".visible = false
+
 		
 	elif Global.pontuacao == 500 and Global.fase==3:
 		$"../Linha Chegada".position.y = $".".position.y
 		$".".visible = false
 		$"../Fundo Obstaculo".visible = false
 		$"../Camera2D/Label".visible = false
+		$"../Camera2D/TextoRespostas".visible = false
 
 func _mudarpos():
 
@@ -231,18 +237,32 @@ func sortear(a):
 			"resposta_correta": 1
 		}
 	]
-		
+	
 	match a: # fase
 		1:
 			#logica para pegar uma questao aleatoria
-			var listaDosIndicesNãoUsados = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+			var numSorteado = randi() % 10
 			
+			while Global.listaDeQuestoesJaFeitas.has(numSorteado):
+				numSorteado = randi() % 10
 			
-			$"../Camera2D/Label".text = (" ")
+			Global.listaDeQuestoesJaFeitas.append(numSorteado)
+			
+			var questaoAtual = questoesConjuntos[numSorteado]
+			
+			var opcoes = questaoAtual["opcoes"]
+			var textoRespostas = "A- " + opcoes[0] + "\nB- " + opcoes[1] + "\nC- " + opcoes[2]
+			
+			$"../Camera2D/Label".text = (questaoAtual["pergunta"])
+			$"../Camera2D/TextoRespostas".text = textoRespostas
+			
+			Global.areaCorreta = questaoAtual["resposta_correta"] + 1
+			
+			print("---")
+			print(Global.areaCorreta)
+			print("---")
 		2:
 			pass
 			
 		3:
 			pass
-		
-	Global.areaCorreta = 1 #area correta

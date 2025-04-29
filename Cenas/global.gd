@@ -10,3 +10,5 @@ var personagem = 1
 
 var areaAtual = 0
 var areaCorreta = 0
+
+var listaDeQuestoesJaFeitas = []
