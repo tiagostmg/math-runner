@@ -240,9 +240,7 @@ func sortear(a):
 	
 	match a: # fase
 		1:
-			#logica para pegar uma questao aleatoria
 			var numSorteado = randi() % 10
-			
 			while Global.listaDeQuestoesJaFeitas.has(numSorteado):
 				numSorteado = randi() % 10
 			
@@ -262,7 +260,24 @@ func sortear(a):
 			print(Global.areaCorreta)
 			print("---")
 		2:
-			pass
+			var numSorteado = randi() % 10
+			while Global.listaDeQuestoesJaFeitas.has(numSorteado):
+				numSorteado = randi() % 10
 			
+			Global.listaDeQuestoesJaFeitas.append(numSorteado)
+			
+			var questaoAtual = questoesPaPg[numSorteado]
+			
+			var opcoes = questaoAtual["opcoes"]
+			var textoRespostas = "A- " + opcoes[0] + "\nB- " + opcoes[1] + "\nC- " + opcoes[2]
+			
+			$"../Camera2D/Label".text = (questaoAtual["pergunta"])
+			$"../Camera2D/TextoRespostas".text = textoRespostas
+			
+			Global.areaCorreta = questaoAtual["resposta_correta"] + 1
+			
+			print("---")
+			print(Global.areaCorreta)
+			print("---")
 		3:
 			pass
