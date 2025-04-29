@@ -158,6 +158,7 @@ theme_override_styles/normal = ExtResource("4_dwy28")
 text = "FASE 2"
 
 [node name="Fase3" type="Button" parent="BotoesFases"]
+visible = false
 offset_left = 231.0
 offset_top = 185.0
 offset_right = 331.0
