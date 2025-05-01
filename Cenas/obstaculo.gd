@@ -12,6 +12,14 @@ func _ready() -> void:
 	$".".visible = true
 	$"../Camera2D/Label".visible = true
 	$"../Camera2D/TextoRespostas".visible = true
+	
+	position.y -= (Global.espaco / 2)
+	$"../Fundo Obstaculo".position.y -= (Global.espaco / 2)
+	
+	$Area1/Label1.text = "A"
+	$Area2/Label2.text = "B"
+	$Area3/Label3.text = "C"
+	
 	Global.pontuacao = 0
 	Global.listaDeQuestoesJaFeitas = []
 

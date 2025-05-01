@@ -2,7 +2,7 @@ extends Node
 var fase = 1
 var nap = 0
 
-var espaco = 512 * 3
+var espaco = 512 * 2
 
 var coracao = 3
 var pontuacao = 0
