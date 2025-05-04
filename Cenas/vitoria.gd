@@ -7,7 +7,7 @@ func _ready() -> void:
 	#pos2 botao1.x = 2
 	#pos botaoProxFase.x = 130
 	
-	if Global.fase == 1 or Global.fase == 2:
+	if Global.fase == 1:
 		$Button.position.x = 2
 		$proxFase.position.x = 130
 		$proxFase.visible = true
